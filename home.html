@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="CSS/home.css">
+
+    <title>Word Gallery</title>
+</head>
+<body>
+    <section class="menu container">
+        <nav>
+            <div class="logo">
+                <a href="home.html">Word Gallery</a>
+            </div>
+            <div class="menu-right">
+                <div class="sort" onclick="sort()">
+                    <i id="sort1" class="uil uil-sort sort1"></i>
+                    <i id="sort2" class="uil uil-sort-amount-down sort2 down"></i>
+                    <i id="sort3" class="uil uil-sort-amount-up sort2 up"></i>
+                </div>
+                <div class="plus" onclick="openModal()">
+                    <i class="uil uil-plus" onclick="openModal()"></i>
+                </div>
+                
+            </div>
+        </nav>
+    </section>
+
+    <section class="popup">
+        <div class="popup-main modal open" id="popup">
+            <i class="uil uil-times" onclick="closeModal()"></i>
+            <div class="popup-view">
+                <h2>Add new Word</h2>
+                <input class="value" type="text" placeholder="word" required>
+                <input class="value meaning" type="text" placeholder="word meaning" required>
+                <input class="value" type="text" placeholder="tag">
+                <div class="add-button">
+                    <input class="button" type="button" value="Add New Word">
+                    <i class="uil uil-angle-right-b"></i>
+                </div>
+                
+            </div>
+        </div>  
+     </section>
+
+
+     
+   
+
+    <script src="JS/home.js"></script>
+</body>
+</html>
