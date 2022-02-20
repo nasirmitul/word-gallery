@@ -32,17 +32,20 @@ a{
     justify-content: space-between;
     align-items: center;
     padding: 25px 0 ;
+    
 }
 
 nav .logo a{
     font-size: 2rem;
     font-weight: 700;
     color: var(--primary);
+    
 }
 
 nav .menu-right{
     display: flex;
     align-items: center;
+    
 }
 
 nav .menu-right .sort{
@@ -50,7 +53,28 @@ nav .menu-right .sort{
     font-weight: 500;
     cursor: pointer;
     color: var(--primary);
-    padding-right: 30px;
+}
+
+nav .menu-right .setting{
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 0 40px;
+    color: var(--primary);
+    cursor: pointer;
+    transition: transform 0.6s;
+}
+
+nav .menu-right .search{
+    font-size: 2rem;
+    font-weight: 500;
+    padding-right: 40px;
+    color: var(--primary);
+    cursor: pointer;
+    transition: transform 0.6s;
+}
+
+nav .menu-right .setting:hover{
+    transform: rotate(90deg);
 }
 
 #sort1{
@@ -81,7 +105,7 @@ nav .menu-right .plus:hover{
 
 .popup{
     padding-top: 100px;
-    height: 50vh;
+    height: 80vh;
     display: grid;
     justify-content: center;
     align-content: center;
@@ -113,6 +137,7 @@ nav .menu-right .plus:hover{
     font-weight: 700;
     color: var(--black);
     cursor: pointer;
+    padding-right: 200px;
     
 }
 

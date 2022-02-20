@@ -26,23 +26,6 @@ function sort()
 }
 
 
-/* function addWord()
-{
-    let popup = document.getElementById("popup");
-
-    if (popup.style.display === "none")
-    {
-        popup.style.display = "block";
-    }
-    else
-    {
-        popup.style.display === "none";
-    }
-}
-
- */
-
-
 function openModal() {
     document.querySelector(".modal").classList.add("open");
   }
