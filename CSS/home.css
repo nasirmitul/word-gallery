@@ -31,8 +31,11 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 0 ;
-    margin-bottom: 10px;
+    padding: 25px 0;
+    /* background: var(--black); */
+    margin-bottom: 15px;
+    width: 100%;
+    /* position: fixed; */
 }
 
 nav .logo a{
@@ -45,36 +48,38 @@ nav .logo a{
 nav .menu-right{
     display: flex;
     align-items: center;
-    
 }
 
 nav .menu-right .sort{
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-weight: 500;
     cursor: pointer;
     color: var(--primary);
+    display: block;
 }
 
 nav .menu-right .setting{
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-weight: 500;
     padding: 0 25px;
     color: var(--primary);
     cursor: pointer;
     transition: transform 0.6s;
+    display: block;
 }
 
 nav .menu-right .profile{
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-weight: 500;
     padding-right: 25px;
     color: var(--primary);
     cursor: pointer;
     transition: transform 0.6s;
+    display: block;
 }
 
 nav .menu-right .search{
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-weight: 500;
     padding-right: 25px;
     color: var(--primary);
@@ -88,23 +93,28 @@ nav .menu-right .search{
 }
 
 nav .menu-right .search .search-bar{
-    display: flex;
     justify-content: center;
-    padding: 0 15px;
     display: none;
+    /* animation-name: example;
+    animation-duration: 1s; */
 }
+
+/* @keyframes example {
+    from {width: 0px;}
+    to {width: 350px;}
+} */
 
 nav .menu-right .search .search-bar i{
     border: 3px solid var(--primary);
-    padding: 4px 10px;
+    padding: 0 10px;
     border-radius: 0 8px 8px 0;
-    margin-left: -3px;
+    margin-left: -2px;
 }
 
 nav .menu-right .search input{
-    padding: 10px 15px;
+    padding: 0 15px;
     width: 300px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     border: 3px solid var(--primary);
     outline: none;
     border-radius: 8px 0 0 8px;
@@ -122,10 +132,6 @@ nav .menu-right .setting:hover{
     display: block;
 }
 
-nav .menu-right .sort .sort2{
-    display: none;
-}
-
 nav .menu-right .plus{
     font-size: 2rem;
     font-weight: 500;
@@ -136,7 +142,6 @@ nav .menu-right .plus{
     width: 45px;
     background-color: var(--primary);
     border-radius: 50%;
-    display: block;
     transition: transform 0.6s;
 }
 
@@ -188,9 +193,7 @@ nav .menu-right .plus:hover{
 
 #popup{
     position: fixed;
-left: calc(50% - 300px);
-
-    
+    left: calc(50% - 300px);
 }
 .popup .popup-view{
     display: flex;
@@ -250,10 +253,8 @@ left: calc(50% - 300px);
 
 .popup-view .add-button:hover{
     background: linear-gradient(200deg, #0170ff, rgba(1, 111, 255, 0.5));
-    transform: translateY(-6px);
-    
+    transform: translateY(-6px);   
 }
-
 
 .add-word .heading{
     display: flex;
@@ -292,7 +293,7 @@ left: calc(50% - 300px);
 
 .all-words .head-letter{
     border-bottom: 2px solid var(--primary);
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--black);

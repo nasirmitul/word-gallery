@@ -70,15 +70,50 @@ function fav(fav_icon)
     fav_icon.classList.toggle('uis-star')
 }
 
+
 function search()
 {
-    let sort = document.getElementsByClassName('sort');
-    let set = document.getElementsByClassName('setting');
-    let pro = document.getElementsByClassName('profile');
-    let sear = document.getElementsByClassName('search');
+    let sort = document.getElementById('sort');
+    let set = document.getElementById('set');
+    let pro = document.getElementById('pro');
+    let sear = document.getElementById('srch');
     
-    let search_bar = document.getElementsByClassName('search-bar');
+    let search_bar = document.getElementById('search-bar');
 
+
+    if(sear.className == "actv")
+    {
+        sear.style.display = "none";
+        search_bar.style.display = "flex";
+        search_bar.style.transition = "1s";
+        sear.className = "dummy";
+        sort.style.display = "none";
+        set.style.display = "none";
+        pro.style.display = "none";
+    }
+
+    else
+    {
+        sear.style.display = "block";
+        search_bar.style.display = "none";
+        sear.className = "actv";
+        sort.style.display = "block";
+        set.style.display = "block";
+        pro.style.display = "block";
+    }
+
+}
+
+
+
+/*function search()
+{
+    let sort = document.getElementById('sort1');
+    let set = document.getElementById('setting');
+    let pro = document.getElementById('profile');
+    let sear = document.getElementById('search');
+
+    let search_bar = document.getElementById('search-bar');
 
     if(sear.style.display === 'block')
     {
@@ -88,4 +123,4 @@ function search()
         set.style.display = 'none';
         pro.style.display = 'none';
     }
-}
+}*/

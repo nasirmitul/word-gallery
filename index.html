@@ -27,29 +27,32 @@
             <div class="logo">
                 <a href="index.html">Word Gallery</a>
             </div>
+
+
             <div class="menu-right">
-                <div class="sort" onclick="sort()">
+
+                <div id="sort" class="sort" onclick="sort()">
                     <i id="sort1" class="uil uil-sort sort1"></i>
                 </div>
                 
-                <div class="setting">
+                <div class="setting" id="set">
                     <i id="setting" class="uil uil-setting"></i>
                 </div>
 
-                <div class="profile">
+                <div class="profile" id="pro">
                     <i id="profile" class="uil uil-user-circle"></i>
                 </div>
                 
                 <div class="search">
-                    <i id="search" class="uil uil-search" onclick="search()"></i>
+                    <div id="srch" class="actv"><i id="search" class="uil uil-search" onclick="search()"></i></div>
                     
                     <div id="search-bar" class="search-bar">
                         <input type="text" placeholder="Search word...">
-                        <i class="uil uil-search"></i>
+                        <i class="uil uil-search" onclick="search()"></i>
                     </div>
-                    
             
                 </div>
+
                 <div class="plus" onclick="openModal()">
                     <i class="uil uil-plus" onclick="openModal()"></i>
                 </div>
@@ -162,18 +165,14 @@
                 <input class="value" type="text" placeholder="word" required>
                 <input class="value meaning" type="text" placeholder="word meaning" required>
                 <input class="value" type="text" placeholder="tag">
-                <div class="add-button">
-                    <input class="button" type="button" value="Add New Word" onclick="closeModal()">
+                <div class="add-button" onclick="closeModal()">
+                    <input class="button" type="button" value="Add New Word">
                     <i class="uil uil-angle-right-b"></i>
                 </div>
 
             </div>
         </div>
     </section>
-
-
-
-
 
 
 
