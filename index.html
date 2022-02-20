@@ -30,19 +30,25 @@
             <div class="menu-right">
                 <div class="sort" onclick="sort()">
                     <i id="sort1" class="uil uil-sort sort1"></i>
-                    <i id="sort2" class="uil uil-sort-amount-down sort2 down"></i>
-                    <i id="sort3" class="uil uil-sort-amount-up sort2 up"></i>
                 </div>
+                
                 <div class="setting">
-                    <i class="uil uil-setting"></i>
+                    <i id="setting" class="uil uil-setting"></i>
                 </div>
 
                 <div class="profile">
-                    <i class="uil uil-user-circle"></i>
+                    <i id="profile" class="uil uil-user-circle"></i>
                 </div>
                 
                 <div class="search">
-                    <i class="uil uil-search"></i>
+                    <i id="search" class="uil uil-search" onclick="search()"></i>
+                    
+                    <div id="search-bar" class="search-bar">
+                        <input type="text" placeholder="Search word...">
+                        <i class="uil uil-search"></i>
+                    </div>
+                    
+            
                 </div>
                 <div class="plus" onclick="openModal()">
                     <i class="uil uil-plus" onclick="openModal()"></i>

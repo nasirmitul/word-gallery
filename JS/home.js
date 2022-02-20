@@ -69,3 +69,23 @@ function fav(fav_icon)
 {
     fav_icon.classList.toggle('uis-star')
 }
+
+function search()
+{
+    let sort = document.getElementsByClassName('sort');
+    let set = document.getElementsByClassName('setting');
+    let pro = document.getElementsByClassName('profile');
+    let sear = document.getElementsByClassName('search');
+    
+    let search_bar = document.getElementsByClassName('search-bar');
+
+
+    if(sear.style.display === 'block')
+    {
+        sear.style.display = 'none'
+        search_bar.style.display = 'block';
+        sort.style.display = 'none';
+        set.style.display = 'none';
+        pro.style.display = 'none';
+    }
+}
