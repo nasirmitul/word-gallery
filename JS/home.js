@@ -63,3 +63,9 @@ function openModal() {
 function closeModal() {
     document.querySelector(".modal").classList.remove("open");
 }
+
+
+function fav(fav_icon)
+{
+    fav_icon.classList.toggle('uis-star')
+}

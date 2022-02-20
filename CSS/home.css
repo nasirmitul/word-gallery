@@ -32,6 +32,7 @@ a{
     justify-content: space-between;
     align-items: center;
     padding: 25px 0 ;
+    margin-bottom: 10px;
 }
 
 nav .logo a{
@@ -231,7 +232,7 @@ left: calc(50% - 300px);
 }
 
 .heading h3{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--primary);
     font-weight: 500;
 }
@@ -262,7 +263,7 @@ left: calc(50% - 300px);
 .all-words .head-letter{
     border-bottom: 2px solid var(--primary);
     margin-bottom: 15px;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--black);
 }
@@ -274,6 +275,15 @@ left: calc(50% - 300px);
 
 .all-words .words .word{
     width: 23%;
+    display: flex;
+    align-items: center;
+}
+
+.all-words .words .word i{
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-left: 6px;
+    color: var(--primary);
 }
 
 .all-words .words .meaning{
@@ -290,7 +300,7 @@ left: calc(50% - 300px);
 }
 
 .all-words .words p{
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     color: var(--black);
     font-weight: 500;
     padding: 5px 0;

@@ -7,6 +7,8 @@
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/solid.css">
+    
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,6 +77,7 @@
                 <div class="words">
                     <div class="word">
                         <p>Abacus</p>
+                        <i class="uil uil-favorite" onclick="fav(this)"></i>
                     </div>
                     <div class="meaning">
                         <p>গণনা-যন্ত্রবিশেষ</p>
@@ -90,6 +93,7 @@
                 <div class="words">
                     <div class="word">
                         <p>Adage</p>
+                        <i class="uil uil-favorite" onclick="fav(this)"></i>
                     </div>
                     <div class="meaning">
                         <p>প্রবচন</p>
@@ -110,6 +114,7 @@
                 <div class="words">
                     <div class="word">
                         <p>Beach</p>
+                        <i class="uil uil-favorite" onclick="fav(this)"></i>
                     </div>
                     <div class="meaning">
                         <p>সৈকত</p>
@@ -125,6 +130,7 @@
                 <div class="words">
                     <div class="word">
                         <p>Board</p>
+                        <i class="uil uil-favorite" onclick="fav(this)"></i>
                     </div>
                     <div class="meaning">
                         <p>তক্তা</p>
@@ -151,7 +157,7 @@
                 <input class="value meaning" type="text" placeholder="word meaning" required>
                 <input class="value" type="text" placeholder="tag">
                 <div class="add-button">
-                    <input class="button" type="button" value="Add New Word">
+                    <input class="button" type="button" value="Add New Word" onclick="closeModal()">
                     <i class="uil uil-angle-right-b"></i>
                 </div>
 
