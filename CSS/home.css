@@ -32,7 +32,6 @@ a{
     justify-content: space-between;
     align-items: center;
     padding: 25px 0 ;
-    
 }
 
 nav .logo a{
@@ -59,6 +58,15 @@ nav .menu-right .setting{
     font-size: 2rem;
     font-weight: 500;
     padding: 0 40px;
+    color: var(--primary);
+    cursor: pointer;
+    transition: transform 0.6s;
+}
+
+nav .menu-right .profile{
+    font-size: 2rem;
+    font-weight: 500;
+    padding-right: 40px;
     color: var(--primary);
     cursor: pointer;
     transition: transform 0.6s;
@@ -145,7 +153,12 @@ nav .menu-right .plus:hover{
     color: red;
 }
 
+#popup{
+    position: fixed;
+left: calc(50% - 300px);
 
+    
+}
 .popup .popup-view{
     display: flex;
     flex-direction: column;
@@ -211,9 +224,74 @@ nav .menu-right .plus:hover{
 
 
 
+.add-word .heading{
+    display: flex;
+    width: 100%;
+    padding-bottom: 4px ;
+}
 
+.heading h3{
+    font-size: 1.8rem;
+    color: var(--primary);
+    font-weight: 500;
+}
 
+.heading .word{
+    width: 23%;
+}
 
+.heading .meaning{
+    width: 40%;
+}
 
+.heading .tag{
+    width: 20%;
+}
 
+.heading .time{
+    width: 17%;
+    text-align: end;
+}
 
+.add-word .all-words{
+    border: 3px solid var(--primary);
+    padding: 8px;
+    margin: 7px 0;
+}
+
+.all-words .head-letter{
+    border-bottom: 2px solid var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.all-words .words{
+    display: flex;
+    width: 100%;
+}
+
+.all-words .words .word{
+    width: 23%;
+}
+
+.all-words .words .meaning{
+    width: 40%;
+}
+
+.all-words .words .tag{
+    width: 20%;
+}
+
+.all-words .words .time{
+    width: 17%;
+    text-align: end;
+}
+
+.all-words .words p{
+    font-size: 1.4rem;
+    color: var(--black);
+    font-weight: 500;
+    padding: 5px 0;
+}

@@ -11,7 +11,8 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
     <!-- CSS File -->
     <link rel="stylesheet" href="CSS/home.css">
@@ -19,53 +20,150 @@
     <title>Word Gallery</title>
 </head>
 <body>
-        <section class="menu container">
-            <nav>
-                <div class="logo">
-                    <a href="index.html">Word Gallery</a>
+    <section class="menu container">
+        <nav>
+            <div class="logo">
+                <a href="index.html">Word Gallery</a>
+            </div>
+            <div class="menu-right">
+                <div class="sort" onclick="sort()">
+                    <i id="sort1" class="uil uil-sort sort1"></i>
+                    <i id="sort2" class="uil uil-sort-amount-down sort2 down"></i>
+                    <i id="sort3" class="uil uil-sort-amount-up sort2 up"></i>
                 </div>
-                <div class="menu-right">
-                    <div class="sort" onclick="sort()">
-                        <i id="sort1" class="uil uil-sort sort1"></i>
-                        <i id="sort2" class="uil uil-sort-amount-down sort2 down"></i>
-                        <i id="sort3" class="uil uil-sort-amount-up sort2 up"></i>
-                    </div>
-                    <div class="setting">
-                        <i class="uil uil-setting"></i>
-                    </div>
-                    <div class="search">
-                        <i class="uil uil-search"></i>
-                    </div>
-                    <div class="plus" onclick="openModal()">
-                        <i class="uil uil-plus" onclick="openModal()"></i>
-                    </div>
-                    
+                <div class="setting">
+                    <i class="uil uil-setting"></i>
                 </div>
-            </nav>
-        </section>
-    
-        <section class="popup">
-            <div class="popup-main modal open" id="popup">
-                <i class="uil uil-times" onclick="closeModal()"></i>
-                <div class="popup-view">
-                    <h2>Add new Word</h2>
-                    <input class="value" type="text" placeholder="word" required>
-                    <input class="value meaning" type="text" placeholder="word meaning" required>
-                    <input class="value" type="text" placeholder="tag">
-                    <div class="add-button">
-                        <input class="button" type="button" value="Add New Word">
-                        <i class="uil uil-angle-right-b"></i>
-                    </div>
-                    
+
+                <div class="profile">
+                    <i class="uil uil-user-circle"></i>
                 </div>
-            </div>  
-         </section>
-    
-    
+                
+                <div class="search">
+                    <i class="uil uil-search"></i>
+                </div>
+                <div class="plus" onclick="openModal()">
+                    <i class="uil uil-plus" onclick="openModal()"></i>
+                </div>
+
+            </div>
+        </nav>
+    </section>
 
 
-     
-     
+    <section class="container">
+        <div class="add-word">
+
+            <div class="heading">
+                <div class="word">
+                    <h3>Word</h3>
+                </div>
+                <div class="meaning">
+                    <h3>Word Meaning</h3>
+                </div>
+                <div class="tag">
+                    <h3>tags</h3>
+                </div>
+                <div class="time">
+                    <h3>Added Time</h3>
+                </div>
+            </div>
+
+            <div class="all-words">
+                <h2 class="head-letter">A</h2>
+
+                <div class="words">
+                    <div class="word">
+                        <p>Abacus</p>
+                    </div>
+                    <div class="meaning">
+                        <p>গণনা-যন্ত্রবিশেষ</p>
+                    </div>
+                    <div class="tag">
+                        <p>word, new word</p>
+                    </div>
+                    <div class="time">
+                        <p>3 june, 2020</p>
+                    </div>
+                </div>
+
+                <div class="words">
+                    <div class="word">
+                        <p>Adage</p>
+                    </div>
+                    <div class="meaning">
+                        <p>প্রবচন</p>
+                    </div>
+                    <div class="tag">
+                        <p>word, new word</p>
+                    </div>
+                    <div class="time">
+                        <p>5 june, 2020</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="all-words">
+                <h2 class="head-letter">B</h2>
+
+                <div class="words">
+                    <div class="word">
+                        <p>Beach</p>
+                    </div>
+                    <div class="meaning">
+                        <p>সৈকত</p>
+                    </div>
+                    <div class="tag">
+                        <p>word, new word</p>
+                    </div>
+                    <div class="time">
+                        <p>3 june, 2020</p>
+                    </div>
+                </div>
+
+                <div class="words">
+                    <div class="word">
+                        <p>Board</p>
+                    </div>
+                    <div class="meaning">
+                        <p>তক্তা</p>
+                    </div>
+                    <div class="tag">
+                        <p>word, new word</p>
+                    </div>
+                    <div class="time">
+                        <p>5 june, 2020</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="popup">
+        <div class="popup-main modal open" id="popup">
+            <i class="uil uil-times" onclick="closeModal()"></i>
+            <div class="popup-view">
+                <h2>Add new Word</h2>
+                <input class="value" type="text" placeholder="word" required>
+                <input class="value meaning" type="text" placeholder="word meaning" required>
+                <input class="value" type="text" placeholder="tag">
+                <div class="add-button">
+                    <input class="button" type="button" value="Add New Word">
+                    <i class="uil uil-angle-right-b"></i>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
 
     <script src="JS/home.js"></script>
 </body>
