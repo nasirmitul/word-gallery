@@ -47,8 +47,10 @@
                     <div id="srch" class="actv"><i id="search" class="uil uil-search" onclick="search()"></i></div>
                     
                     <div id="search-bar" class="search-bar">
-                        <input type="text" placeholder="Search word...">
-                        <i class="uil uil-search" onclick="search()"></i>
+                        <i class="uil uil-times cross" onclick="search()"></i>
+                        <input id="search-text" type="text" placeholder="Search word...">
+                        
+                        <i class="uil uil-search search"></i>
                     </div>
             
                 </div>
@@ -64,7 +66,6 @@
 
     <section class="container">
         <div class="add-word">
-
             <div class="heading">
                 <div class="word">
                     <h3>Word</h3>

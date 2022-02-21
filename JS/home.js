@@ -77,6 +77,7 @@ function search()
     let set = document.getElementById('set');
     let pro = document.getElementById('pro');
     let sear = document.getElementById('srch');
+    let search_text = document.getElementById('search-text');
     
     let search_bar = document.getElementById('search-bar');
 
@@ -85,7 +86,7 @@ function search()
     {
         sear.style.display = "none";
         search_bar.style.display = "flex";
-        search_bar.style.transition = "1s";
+        search_bar.style.transition = "0.6s";
         sear.className = "dummy";
         sort.style.display = "none";
         set.style.display = "none";
@@ -100,27 +101,7 @@ function search()
         sort.style.display = "block";
         set.style.display = "block";
         pro.style.display = "block";
-    }
 
+        search_text.value = "";
+    }
 }
-
-
-
-/*function search()
-{
-    let sort = document.getElementById('sort1');
-    let set = document.getElementById('setting');
-    let pro = document.getElementById('profile');
-    let sear = document.getElementById('search');
-
-    let search_bar = document.getElementById('search-bar');
-
-    if(sear.style.display === 'block')
-    {
-        sear.style.display = 'none'
-        search_bar.style.display = 'block';
-        sort.style.display = 'none';
-        set.style.display = 'none';
-        pro.style.display = 'none';
-    }
-}*/

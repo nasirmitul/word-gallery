@@ -95,20 +95,30 @@ nav .menu-right .search{
 nav .menu-right .search .search-bar{
     justify-content: center;
     display: none;
-    /* animation-name: example;
-    animation-duration: 1s; */
+    animation-name: enlarge;
+    animation-duration: 1s;
 }
 
-/* @keyframes example {
+@keyframes enlarge{
     from {width: 0px;}
     to {width: 350px;}
-} */
+}
 
-nav .menu-right .search .search-bar i{
+nav .menu-right .search .search-bar .search{
     border: 3px solid var(--primary);
     padding: 0 10px;
     border-radius: 0 8px 8px 0;
     margin-left: -2px;
+}
+
+nav .menu-right .search .search-bar .cross{
+    position: absolute;
+    margin: 1px 0 0 215px;
+    font-size: 2rem;
+}
+
+nav .menu-right .search .search-bar .cross:hover{
+    color: red;
 }
 
 nav .menu-right .search input{
@@ -183,8 +193,6 @@ nav .menu-right .plus:hover{
     font-weight: 700;
     color: var(--black);
     cursor: pointer;
-    padding-right: 200px;
-    
 }
 
 .popup-main .uil-times:hover{
@@ -260,6 +268,7 @@ nav .menu-right .plus:hover{
     display: flex;
     width: 100%;
     padding-bottom: 4px ;
+    /* align-items: center; */
 }
 
 .heading h3{
@@ -289,6 +298,9 @@ nav .menu-right .plus:hover{
     border: 3px solid var(--primary);
     padding: 8px;
     margin: 7px 0;
+    align-items: center;
+    align-content: center;
+    
 }
 
 .all-words .head-letter{
@@ -302,6 +314,8 @@ nav .menu-right .plus:hover{
 .all-words .words{
     display: flex;
     width: 100%;
+    align-items: center;
+    /* align-content: center; */
 }
 
 .all-words .words .word{
@@ -336,4 +350,119 @@ nav .menu-right .plus:hover{
     color: var(--black);
     font-weight: 500;
     padding: 5px 0;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    /* .popup{
+        display: none;
+    }
+ */
+    nav .logo a{
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    nav .menu-right .sort{
+        font-size: 1.4rem;
+    }
+
+    nav .menu-right .setting{
+        font-size: 1.4rem;
+        padding: 0 15px;
+    }
+
+    nav .menu-right .profile{
+        font-size: 1.4rem;
+        padding-right: 15px;
+    }
+
+    nav .menu-right .search{
+        font-size: 1.4rem;
+        padding-right: 15px;
+    }
+
+    nav .menu-right .search .search-bar .search{
+        border-radius: 0 5px 5px 0;
+        height: 35px;
+    }
+
+    nav .menu-right .search .search-bar .cross{
+        margin: -3px 0 0 120px;
+        font-size: 1.7rem;
+    }
+
+    nav .menu-right .search input{
+        padding: 0 10px;
+        width: 200px;
+        height: 35px;
+        font-size: .9rem;
+        border-radius: 5px 0 0 5px;
+    }
+
+    @keyframes enlarge{
+        from {width: 0px;}
+        to {width: 250px;}
+    }
+
+    nav .menu-right .plus{
+        font-size: 1.5rem;
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+    }
+
+    .heading h3{
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .all-words .head-letter{
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    .all-words .words p{
+        font-size: .9rem;
+        font-weight: 500;
+    }
+    
+    #popup{
+        position: fixed;
+        left: calc(50% - 200px);
+    }
+
+    .popup{
+        padding-top: 10px;
+    }
+    
+    .popup-main{
+        height: 380px;
+        width: 400px;
+        border-radius: 8px;
+    }
+
+    .popup-view h2{
+        font-size: 1.3rem;
+    }
+    
+    .popup-view .value{
+        padding: 8px 15px;
+        width: 360px;
+        margin: 8px;
+        font-size: 1rem;
+    }
+    
+    .popup-view .add-button{
+        margin-top: 35px;
+        padding: 8px 25px;
+    }
+    
+    .popup-view .button{
+        font-size: 1.1rem;
+    }
 }
