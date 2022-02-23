@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,9 @@
     <!-- Icons -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/solid.css">
-    
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +24,30 @@
 
     <title>Word Gallery</title>
 </head>
+
 <body>
+
+    <div class="popup-screen">
+        <div class="popup-box">
+            <i class="uil uil-times close-btn"></i>
+            <div class="popup">
+                <div class="popup-view">
+                    <h2>Add new Word</h2>
+                    <input class="in-box" type="text" placeholder="word" required>
+                    <input class="in-box meaning" type="text" placeholder="word meaning" required>
+                    <input class="in-box" type="text" placeholder="tag">
+                    <div class="add-button">
+                        <input class="button" type="button" value="Add New Word">
+                        <i class="uil uil-angle-right-b"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    
     <section class="menu container">
         <nav>
             <div class="logo">
@@ -34,7 +60,7 @@
                 <div id="sort" class="sort" onclick="sort()">
                     <i id="sort1" class="uil uil-sort sort1"></i>
                 </div>
-                
+
                 <div class="setting" id="set">
                     <i id="setting" class="uil uil-setting"></i>
                 </div>
@@ -42,21 +68,21 @@
                 <div class="profile" id="pro">
                     <i id="profile" class="uil uil-user-circle"></i>
                 </div>
-                
+
                 <div class="search">
                     <div id="srch" class="actv"><i id="search" class="uil uil-search" onclick="search()"></i></div>
-                    
+
                     <div id="search-bar" class="search-bar">
                         <i class="uil uil-times cross" onclick="search()"></i>
                         <input id="search-text" type="text" placeholder="Search word...">
-                        
+
                         <i class="uil uil-search search"></i>
                     </div>
-            
+
                 </div>
 
-                <div class="plus" onclick="openModal()">
-                    <i class="uil uil-plus" onclick="openModal()"></i>
+                <div class="plus open-btn" onclick="openModal()">
+                    <i class="uil uil-plus open-btn" onclick="openModal()"></i>
                 </div>
 
             </div>
@@ -158,25 +184,8 @@
         </div>
     </section>
 
-    <section class="popup">
-        <div class="popup-main modal open" id="popup">
-            <i class="uil uil-times" onclick="closeModal()"></i>
-            <div class="popup-view">
-                <h2>Add new Word</h2>
-                <input class="value" type="text" placeholder="word" required>
-                <input class="value meaning" type="text" placeholder="word meaning" required>
-                <input class="value" type="text" placeholder="tag">
-                <div class="add-button" onclick="closeModal()">
-                    <input class="button" type="button" value="Add New Word">
-                    <i class="uil uil-angle-right-b"></i>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
 
     <script src="JS/home.js"></script>
 </body>
+
 </html>

@@ -18,6 +18,10 @@ html{
     scroll-behavior: smooth;
 }
 
+body{
+    min-height: 100vh;
+}
+
 a{
     text-decoration: none;
 }
@@ -27,6 +31,133 @@ a{
     margin-inline: auto;
 }
 
+
+/* ---------- Popup Design Start ---------- */
+
+.popup-screen{
+    z-index: 999999;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(7px);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    transition: 0.5s ease;
+    transition-property: visibility;
+}
+
+.popup-screen.active{
+    visibility: visible;
+}
+
+.popup-box{
+    position: relative;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: var(--shadoww);
+    transform: scale(0);
+    transition: 0.5s ease;
+    transition-property: transform;
+}
+
+.popup-screen.active .popup-box{
+    transform: scale(1);
+}
+
+.popup-box .uil-times{
+    position: absolute;
+    font-size: 2rem;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.3s ease;
+    transition-property: opacity;
+}
+
+.popup-box .uil-times:hover{
+    opacity: 1;
+}
+
+.popup{
+    display: grid;
+    /* width: 600px; */
+    padding: 35px;
+    /* height: 46vh; */
+    height: auto;
+}
+
+.popup .popup-view{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-view h2{
+    color: var(--black);
+    padding-bottom: 13px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.popup-view .in-box{
+    padding: 13px 20px;
+    width: 500px;
+    margin: 8px;
+    background: transparent;
+    border: 3px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+::placeholder{
+    color: rgba(63, 63, 63, 0.5);
+}
+
+.popup-view .add-button{
+    margin-top: 35px;
+    padding: 15px 30px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #1b7cfc, rgba(1, 111, 255, 0.5));
+    color: var(--bg);
+    border-radius: 5px;
+    transition: transform 0.6s;
+}
+
+.popup-view .button{
+    font-size: 1.3rem;
+    font-weight: 500;
+    background: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.add-button i{
+    font-size: 1.3rem;
+    padding-left: 10px;
+}
+
+.popup-view .add-button:hover{
+    background: linear-gradient(200deg, #0170ff, rgba(1, 111, 255, 0.5));
+    transform: translateY(-6px);   
+}
+/* ---------- Popup Design End ---------- */
+
+
+/* ---------- Menu Design Start ---------- */
 .menu nav{
     display: flex;
     justify-content: space-between;
@@ -158,6 +289,9 @@ nav .menu-right .plus{
 nav .menu-right .plus:hover{
     transform: rotate(90deg);
 }
+/* ---------- Menu Design End ---------- */
+
+/* Popup Start
 
 .popup{
     padding-top: 100px;
@@ -175,7 +309,6 @@ nav .menu-right .plus:hover{
     background-color: var(--light);
     box-shadow: var(--shadoww);
 }
-
 
 .modal {
     visibility: hidden;
@@ -262,7 +395,9 @@ nav .menu-right .plus:hover{
 .popup-view .add-button:hover{
     background: linear-gradient(200deg, #0170ff, rgba(1, 111, 255, 0.5));
     transform: translateY(-6px);   
-}
+} 
+Popup End*/
+
 
 .add-word .heading{
     display: flex;
@@ -299,8 +434,7 @@ nav .menu-right .plus:hover{
     padding: 8px;
     margin: 7px 0;
     align-items: center;
-    align-content: center;
-    
+    align-content: center;   
 }
 
 .all-words .head-letter{
@@ -351,10 +485,6 @@ nav .menu-right .plus:hover{
     font-weight: 500;
     padding: 5px 0;
 }
-
-
-
-
 
 
 @media only screen and (max-width: 600px) {
@@ -451,7 +581,7 @@ nav .menu-right .plus:hover{
         font-size: 1.3rem;
     }
     
-    .popup-view .value{
+    .popup-view .in-box{
         padding: 8px 15px;
         width: 360px;
         margin: 8px;
