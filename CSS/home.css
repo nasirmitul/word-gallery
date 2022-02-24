@@ -32,6 +32,9 @@ a{
     margin-inline: auto;
 }
 
+.mobile-menu{
+    display: none;
+}
 
 /* ---------- Popup Design Start ---------- */
 .popup-screen{
@@ -495,23 +498,123 @@ nav .menu-right .plus:hover{
 
 
 @media only screen and (max-width: 500px) {
+    .popup-view .in-box{
+        width: 320px;
+    }
+
+    .popup-view .add-button{
+        margin-top: 15px;
+    }
+    
+    .popup-view .button{
+        font-size: 1.1rem;
+    }
+
     nav .logo a{
         font-size: 1.5rem;
         font-weight: 600;
     }
 
+    nav .menu-right .game{
+        display: none;
+    }
+    
+    nav .menu-right .sort{
+        display: none;
+    }
+    
+    nav .menu-right .setting{
+        display: none;
+    }
+    
+    nav .menu-right .profile{
+        display: none;
+    }
+
+    /* #searchbox{
+        margin-right: -15px;
+    } */
+    
+    .search .uil-search{
+        font-size: 1.3rem;
+    }
+
+    .active input{
+        width: 200px;
+    }
+    
+    .active .uil-times{
+        font-size: 1.3rem;
+    }
+
+    nav .menu-right .plus{
+        display: none;
+    }
+
     .heading h3{
-        font-size: 1.2rem;
-        font-weight: 500;
+        font-size: 1rem;
     }
 
     .all-words .head-letter{
         font-size: 1.1rem;
-        font-weight: 600;
     }
 
     .all-words .words p{
-        font-size: .9rem;
-        font-weight: 500;
+        font-size: .8rem;
     }
+
+    .mobile-menu{
+        display: block;
+        /* bottom: 0; */
+        width: 100%;
+        
+    }
+
+    .mobile-menu .menu{
+        display: flex;
+        width: 100%;
+        height: 50px;
+        justify-content: space-between;
+        align-items: center;
+        position:fixed;
+        background: var(--bg);
+        box-shadow: var(--shadoww);
+        padding: 10px 8%;
+        bottom: 0;
+        font-size: 1.7rem;
+        color: var(--primary);
+    }
+
+    .mobile-menu .menu .plus{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 57px;
+        width: 57px;
+        background-color: var(--bg);
+        margin-bottom: 50px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 4px white;
+    }
+
+    .mobile-menu .menu .plus-main{
+        height: 45px;
+        width: 45px;
+        font-size: 2rem;
+        background: var(--primary);
+        color: var(--bg);
+        border-radius: 50%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .mobile-menu .game,
+    .mobile-menu .sort,
+    .mobile-menu .plus,
+    .mobile-menu .setting,
+    .mobile-menu .profile{
+        cursor: pointer;
+    }
+
+
 }

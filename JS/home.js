@@ -53,6 +53,14 @@ function search() {
     let pro = document.getElementById('pro');
     let game = document.getElementById('game');
 
+    /* let query = window.matchMedia("(min-width: 500px)");
+    if(query.matches){
+        game.style.display = "none";
+        sort.style.display = "none";
+        set.style.display = "none";
+        pro.style.display = "none";
+    } */
+
     searchbox.classList.toggle('active');
 
     if (remove.className == 'actv') {
