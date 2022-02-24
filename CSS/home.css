@@ -90,9 +90,7 @@ a{
 
 .popup{
     display: grid;
-    /* width: 600px; */
     padding: 35px;
-    /* height: 46vh; */
     height: auto;
 }
 
@@ -131,7 +129,7 @@ a{
 
 .popup-view .add-button{
     margin-top: 35px;
-    padding: 15px 30px;
+    padding: 13px 0;
     cursor: pointer;
     background: linear-gradient(45deg, #1b7cfc, rgba(1, 111, 255, 0.5));
     color: var(--bg);
@@ -185,6 +183,15 @@ nav .menu-right{
     align-items: center;
 }
 
+nav .menu-right .game{
+    font-size: 1.7rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--primary);
+    display: block;
+    margin-right: 25px;
+}
+
 nav .menu-right .sort{
     font-size: 1.7rem;
     font-weight: 500;
@@ -196,7 +203,7 @@ nav .menu-right .sort{
 nav .menu-right .setting{
     font-size: 1.7rem;
     font-weight: 500;
-    padding: 0 25px;
+    margin: 0 25px;
     color: var(--primary);
     cursor: pointer;
     transition: transform 0.6s;
@@ -210,7 +217,7 @@ nav .menu-right .setting:hover{
 nav .menu-right .profile{
     font-size: 1.7rem;
     font-weight: 500;
-    padding-right: 25px;
+    margin-right: 25px;
     color: var(--primary);
     cursor: pointer;
     transition: transform 0.6s;
@@ -218,7 +225,7 @@ nav .menu-right .profile{
 }
 
 #searchbox{
-    padding-right: 25px;
+    margin-right: 25px;
     display: flex;
     align-items: center;
 }
@@ -280,6 +287,7 @@ nav .menu-right .profile{
 }
 
 nav .menu-right .plus{
+    margin-left: -10px;
     font-size: 2rem;
     font-weight: 500;
     text-align: center;
@@ -307,7 +315,7 @@ nav .menu-right .plus:hover{
 }
 
 .heading h3{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--primary);
     font-weight: 500;
 }
@@ -380,66 +388,116 @@ nav .menu-right .plus:hover{
 }
 
 .all-words .words p{
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--black);
     font-weight: 500;
     padding: 5px 0;
 }
 
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px){
     .container{
-        width: 97%;
-        margin-inline: auto;
+        width: 95%;
+    }
+    
+    .popup-box{
+        margin: 15px;
+    }
+
+    .popup{
+        padding: 30px;
+    }
+
+    .popup-view h2{
+        font-size: 1.5rem;
+    }
+    
+    .popup-view .in-box{
+        padding: 10px 15px;
+        width: 400px;
+        margin: 6px;
+        font-size: 1rem;
+    }
+
+    .popup-view .add-button{
+        margin-top: 30px;
+        padding: 10px 0;
+    }
+    
+    .popup-view .button{
+        font-size: 1.1rem;
     }
 
     nav .logo a{
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         font-weight: 600;
     }
 
+    nav .menu-right .game{
+        font-size: 1.5rem;
+        margin-right: 20px;
+    }
+    
     nav .menu-right .sort{
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
-
+    
     nav .menu-right .setting{
-        font-size: 1.4rem;
-        padding: 0 15px;
+        font-size: 1.5rem;
+        margin: 0 20px;
     }
-
+    
     nav .menu-right .profile{
-        font-size: 1.4rem;
-        padding-right: 15px;
+        font-size: 1.5rem;
+        margin-right: 20px;
     }
-
-    nav .menu-right .search{
-        font-size: 1.4rem;
-        padding-right: 15px;
+    
+    #searchbox{
+        margin-right: 20px;
     }
-
-    nav .menu-right .search .search-bar .search{
-        border-radius: 0 5px 5px 0;
-        height: 35px;
+    
+    .search .uil-search{
+        font-size: 1.5rem;
     }
-
-    nav .menu-right .search .search-bar .cross{
-        margin: -3px 0 0 120px;
-        font-size: 1.7rem;
-    }
-
-    nav .menu-right .search input{
-        padding: 0 10px;
-        width: 200px;
-        height: 35px;
+    
+    .search input{
         font-size: .9rem;
-        border-radius: 5px 0 0 5px;
+    }
+    
+    .active input{
+        width: 215px;
+    }
+    
+    .active .uil-times{
+        font-size: 1.5rem;
     }
 
     nav .menu-right .plus{
+        font-size: 1.6rem;
+        height: 37px;
+        width: 37px;
+    }
+
+    .heading h3{
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .all-words .head-letter{
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    .all-words .words p{
+        font-size: .9rem;
+        font-weight: 500;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    nav .logo a{
         font-size: 1.5rem;
-        height: 36px;
-        width: 36px;
-        border-radius: 50%;
+        font-weight: 600;
     }
 
     .heading h3{
@@ -455,40 +513,5 @@ nav .menu-right .plus:hover{
     .all-words .words p{
         font-size: .9rem;
         font-weight: 500;
-    }
-    
-    #popup{
-        position: fixed;
-        left: calc(50% - 200px);
-    }
-
-    .popup{
-        padding-top: 10px;
-    }
-    
-    .popup-main{
-        height: 380px;
-        width: 400px;
-        border-radius: 8px;
-    }
-
-    .popup-view h2{
-        font-size: 1.3rem;
-    }
-    
-    .popup-view .in-box{
-        padding: 8px 15px;
-        width: 360px;
-        margin: 8px;
-        font-size: 1rem;
-    }
-    
-    .popup-view .add-button{
-        margin-top: 35px;
-        padding: 8px 25px;
-    }
-    
-    .popup-view .button{
-        font-size: 1.1rem;
     }
 }

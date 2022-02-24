@@ -51,10 +51,12 @@ function search() {
     let sort = document.getElementById('sort');
     let set = document.getElementById('set');
     let pro = document.getElementById('pro');
+    let game = document.getElementById('game');
 
     searchbox.classList.toggle('active');
 
     if (remove.className == 'actv') {
+        game.style.display = "none";
         sort.style.display = "none";
         set.style.display = "none";
         pro.style.display = "none";
@@ -63,43 +65,13 @@ function search() {
 
     else {
         setTimeout(function () {
+            game.style.display = "block";
             sort.style.display = "block";
             set.style.display = "block";
             pro.style.display = "block";
             remove.className = "actv";
             search_text.value = "";
-        }, 700);
+        }, 500);
     }
 }
 /*---------------- Search expand and close ----------------*/
-
-
-
-/* function search() {
-    let sort = document.getElementById('sort');
-    let set = document.getElementById('set');
-    let pro = document.getElementById('pro');
-    let sear = document.getElementById('srch');
-    let search_text = document.getElementById('search-text');
-    let search_bar = document.getElementById('search-bar');
-
-    if (sear.className == "actv") {
-        sear.style.display = "none";
-        search_bar.style.display = "flex";
-        search_bar.style.transition = "0.6s";
-        sear.className = "dummy";
-        sort.style.display = "none";
-        set.style.display = "none";
-        pro.style.display = "none";
-    }
-
-    else {
-        sear.style.display = "block";
-        search_bar.style.display = "none";
-        sear.className = "actv";
-        sort.style.display = "block";
-        set.style.display = "block";
-        pro.style.display = "block";
-        search_text.value = "";
-    }
-} */
