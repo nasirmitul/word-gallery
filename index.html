@@ -69,16 +69,12 @@
                     <i id="profile" class="uil uil-user-circle"></i>
                 </div>
 
-                <div class="search">
-                    <div id="srch" class="actv"><i id="search" class="uil uil-search" onclick="search()"></i></div>
-
-                    <div id="search-bar" class="search-bar">
-                        <i class="uil uil-times cross" onclick="search()"></i>
-                        <input id="search-text" type="text" placeholder="Search word...">
-
-                        <i class="uil uil-search search"></i>
+                <div class="search actv" id="searchbox">
+                    <div class="actv" id="act">
+                        <i class="uil uil-search search" id="searchicon" onclick="search()"></i>
+                        <input id="search-text" type="text" placeholder="Type word...">
+                        <i class="uil uil-times cross" id="search-close" onclick="search()"></i>
                     </div>
-
                 </div>
 
                 <div class="plus open-btn" onclick="openModal()">

@@ -4,6 +4,7 @@
     --bg: #f0f7ff;
     --black:  #3d3d3d;
     --shadoww: 0px 2px 10px 0px rgba(1, 111, 255, 0.3);
+    --focus: 0px 0px 10px 1px rgba(1, 111, 255, 0.3);
 }
 
 *{
@@ -33,7 +34,6 @@ a{
 
 
 /* ---------- Popup Design Start ---------- */
-
 .popup-screen{
     z-index: 999999;
     position: fixed;
@@ -114,11 +114,15 @@ a{
     width: 500px;
     margin: 8px;
     background: transparent;
-    border: 3px solid rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     outline: none;
     font-size: 1.2rem;
     font-weight: 400;
+}
+
+.popup-view .in-box:focus{
+    box-shadow: var(--focus);
 }
 
 ::placeholder{
@@ -199,6 +203,10 @@ nav .menu-right .setting{
     display: block;
 }
 
+nav .menu-right .setting:hover{
+    transform: rotate(90deg);
+}
+
 nav .menu-right .profile{
     font-size: 1.7rem;
     font-weight: 500;
@@ -209,68 +217,66 @@ nav .menu-right .profile{
     display: block;
 }
 
-nav .menu-right .search{
-    font-size: 1.7rem;
-    font-weight: 500;
+#searchbox{
     padding-right: 25px;
-    color: var(--primary);
-    cursor: pointer;
-    transition: transform 0.6s;
+    display: flex;
     align-items: center;
 }
 
-#search{
-    display: block;
+#act{
+    display: flex;
+    align-items: center;
 }
 
-nav .menu-right .search .search-bar{
-    justify-content: center;
-    display: none;
-    animation-name: enlarge;
-    animation-duration: 1s;
-}
-
-@keyframes enlarge{
-    from {width: 0px;}
-    to {width: 350px;}
-}
-
-nav .menu-right .search .search-bar .search{
-    border: 3px solid var(--primary);
-    padding: 0 10px;
-    border-radius: 0 8px 8px 0;
-    margin-left: -2px;
-}
-
-nav .menu-right .search .search-bar .cross{
+.search .uil-search{
+    cursor: pointer;
+    font-size: 1.7rem;
+    color: var(--primary);
     position: absolute;
-    margin: 1px 0 0 215px;
-    font-size: 2rem;
 }
 
-nav .menu-right .search .search-bar .cross:hover{
+.active .uil-search{
+    margin: 0 10px;
+}
+
+.search .uil-times{
+    cursor: pointer;
+    font-size: 0rem;
+    color: var(--primary);
+    position: relative;
+    transition: .2s;
+    transition-delay: .2s;
+}
+.search .uil-times:hover{
     color: red;
 }
 
-nav .menu-right .search input{
-    padding: 0 15px;
-    width: 300px;
-    font-size: 1.1rem;
-    border: 3px solid var(--primary);
+.search input{
+    font-size: 1rem;
+    width: 0px;
+    border: none;
+    background: transparent;
     outline: none;
-    border-radius: 8px 0 0 8px;
+    padding: 7px 0 7px 35px;
+    border-radius: 30px;
+    transition: .7s;
 }
 
-nav .menu-right .search input::placeholder{
+.search input:focus{
+    box-shadow: var(--focus);
+}
+
+.search input::placeholder{
     color: rgba(61, 61, 61, 0.6);
 }
 
-nav .menu-right .setting:hover{
-    transform: rotate(90deg);
+.active input{
+    width: 300px;
+    border: 2px solid var(--primary);
 }
 
-#sort1{
-    display: block;
+.active .uil-times{
+    font-size: 1.7rem;
 }
 
 nav .menu-right .plus{
@@ -291,112 +297,6 @@ nav .menu-right .plus:hover{
 }
 /* ---------- Menu Design End ---------- */
 
-/* Popup Start
-
-.popup{
-    padding-top: 100px;
-    height: 80vh;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-}
-
-.popup-main{
-    height: 480px;
-    width: 600px;
-    padding: 30px;
-    border-radius: 10px;
-    background-color: var(--light);
-    box-shadow: var(--shadoww);
-}
-
-.modal {
-    visibility: hidden;
-    transition: all .7s;
-    opacity: 0;
-}
-
-.modal.open {
-    visibility: visible;
-    opacity: 1;
-}
-
-.popup-main .uil-times{
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--black);
-    cursor: pointer;
-}
-
-.popup-main .uil-times:hover{
-    color: red;
-}
-
-#popup{
-    position: fixed;
-    left: calc(50% - 300px);
-}
-.popup .popup-view{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.popup-view h2{
-    color: var(--black);
-    padding-bottom: 13px;
-    font-size: 1.8rem;
-    font-weight: 500;
-    margin-top: -44px;
-}
-
-.popup-view .value{
-    padding: 15px 20px;
-    width: 500px;
-    margin: 10px;
-    background: transparent;
-    border: 3px solid var(--bg);
-    border-radius: 5px;
-    outline: none;
-    font-size: 1.2rem;
-    font-weight: 400;
-}
-
-::placeholder{
-    color: rgba(240, 247, 255, 0.8);
-}
-
-.popup-view .add-button{
-    margin-top: 35px;
-    padding: 15px 30px;
-    cursor: pointer;
-    background: linear-gradient(45deg, #0170ff, rgba(1, 111, 255, 0.5));
-    color: var(--bg);
-    border-radius: 5px;
-    transition: transform 0.6s;
-}
-
-.popup-view .button{
-    font-size: 1.3rem;
-    font-weight: 500;
-    background: transparent;
-    color: var(--bg);
-    outline: none;
-    border: none;
-    cursor: pointer;
-}
-
-.add-button i{
-    font-size: 1.3rem;
-    font-weight: 500;
-    padding-left: 10px;
-}
-
-.popup-view .add-button:hover{
-    background: linear-gradient(200deg, #0170ff, rgba(1, 111, 255, 0.5));
-    transform: translateY(-6px);   
-} 
-Popup End*/
 
 
 .add-word .heading{
@@ -430,7 +330,7 @@ Popup End*/
 }
 
 .add-word .all-words{
-    border: 3px solid var(--primary);
+    border: 2px solid var(--primary);
     padding: 8px;
     margin: 7px 0;
     align-items: center;
@@ -438,7 +338,7 @@ Popup End*/
 }
 
 .all-words .head-letter{
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 1.5px solid var(--primary);
     margin-bottom: 10px;
     font-size: 1.5rem;
     font-weight: 600;
@@ -533,11 +433,6 @@ Popup End*/
         height: 35px;
         font-size: .9rem;
         border-radius: 5px 0 0 5px;
-    }
-
-    @keyframes enlarge{
-        from {width: 0px;}
-        to {width: 250px;}
     }
 
     nav .menu-right .plus{
