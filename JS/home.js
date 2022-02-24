@@ -37,6 +37,36 @@ function sort() {
 }
 /*---------------- Sorting icons change ----------------*/
 
+
+
+/*---------------- Sorting icons change Mobile----------------
+function sortMobile() {
+    let x = document.getElementById("sort-mobile");
+    let y = x.classList;
+
+    for (let i = 0; i < y.length; i++) {
+        if (y[i] == "uil-sort") {
+            y.remove(y[i]);
+            y.add("uil-sort-amount-down");
+            return;
+        }
+        else if (y[i] == "uil-sort-amount-down") {
+            y.remove(y[i]);
+            y.add("uil-sort-amount-up");
+            return;
+        }
+        else if (y[i] == "uil-sort-amount-up") {
+            y.remove(y[i]);
+            y.add("uil-sort");
+            return;
+        }
+    }
+}
+---------------- Sorting icons change ----------------*/
+
+
+
+
 /*---------------- Add favorite ----------------*/
 function fav(fav_icon) {
     fav_icon.classList.toggle('uis-star')
@@ -52,14 +82,7 @@ function search() {
     let set = document.getElementById('set');
     let pro = document.getElementById('pro');
     let game = document.getElementById('game');
-
-    /* let query = window.matchMedia("(min-width: 500px)");
-    if(query.matches){
-        game.style.display = "none";
-        sort.style.display = "none";
-        set.style.display = "none";
-        pro.style.display = "none";
-    } */
+    let query = window.matchMedia("(max-width: 500px)")
 
     searchbox.classList.toggle('active');
 
@@ -72,14 +95,22 @@ function search() {
     }
 
     else {
-        setTimeout(function () {
-            game.style.display = "block";
-            sort.style.display = "block";
-            set.style.display = "block";
-            pro.style.display = "block";
-            remove.className = "actv";
-            search_text.value = "";
-        }, 500);
+        if(query.matches){
+            game.style.display = "none";
+            sort.style.display = "none";
+            set.style.display = "none";
+            pro.style.display = "none";
+        }
+        else{
+            setTimeout(function () {
+                game.style.display = "block";
+                sort.style.display = "block";
+                set.style.display = "block";
+                pro.style.display = "block";
+                remove.className = "actv";
+                search_text.value = "";
+            }, 500);
+        }    
     }
 }
 /*---------------- Search expand and close ----------------*/
