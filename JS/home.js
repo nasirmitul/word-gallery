@@ -39,9 +39,9 @@ function sort() {
 
 
 
-/*---------------- Sorting icons change Mobile----------------
-function sortMobile() {
-    let x = document.getElementById("sort-mobile");
+/* ---------------- Sorting icons change Mobile---------------- */
+function mobileSort() {
+    let x = document.getElementById("sort1-mob");
     let y = x.classList;
 
     for (let i = 0; i < y.length; i++) {
@@ -62,7 +62,7 @@ function sortMobile() {
         }
     }
 }
----------------- Sorting icons change ----------------*/
+/* ---------------- Sorting icons change ---------------- */
 
 
 
